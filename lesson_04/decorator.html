@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>decorator</title>
+</head>
+<body>
+<script>
+  let sayHi = (username) => {
+    console.log('I am ' + username)
+  }
+
+  let add = (x, y) => {
+    console.log(x + y)
+  }
+
+  //定义不接受任何参数的装饰器函数
+  let logDecorator = fn => {
+    return (...args) => {
+      console.log('before~')
+      const result = fn(...args)
+      console.log('after~')
+      return result
+    }
+  }
+
+  //定义接受参数的装饰器函数
+  let logArgsDecorator = number => {
+    //return的就是不接受参数的装饰器函数
+    return fn => {
+      return (...args) => {
+        console.log('before~' + number)
+        const result = fn(...args)
+        console.log('after~' + number)
+        return result
+      }
+    }
+  }
+
+  //使用装饰器函数来装饰sayHi函数
+  sayHi = logDecorator(sayHi)
+  sayHi('Tom')
+
+  add = logArgsDecorator(99)(add)
+  add(20, 30)
+</script>
+</body>
+</html>
