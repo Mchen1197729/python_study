@@ -13,7 +13,7 @@ class Student(object):
         return self.__gender
 
     def set_gender(self, gender):
-        if gender != 'female' & gender != 'male':
+        if gender != 'female' and gender != 'male':
             raise ValueError('传入的性别不合法')
         else:
             self.__gender = gender
