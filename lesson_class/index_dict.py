@@ -7,6 +7,9 @@ class Student(object):
         self.name = name
         self.age = age
 
+    def hello(self):
+        print('Hello_Python', self.name)
+
 
 s1 = Student('Jack', 20)
 print(s1.__dict__)
