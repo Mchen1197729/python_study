@@ -81,3 +81,27 @@ class Screen(object):
     @property
     def resolution(self):
         return self._width * self._width + self._height * self._height
+
+
+print('*******************练习*********************')
+
+
+class Girl(object):
+    @property
+    def age(self):
+        return self._age or 18
+
+    @age.setter
+    def age(self, age):
+        if not isinstance(age, int):
+            raise TypeError('传入的数据格式不合法')
+        elif age > 100 or age < 0:
+            raise ValueError('传入的年龄不合法')
+        self._age = age
+
+
+g = Girl()
+# print(g.age)
+
+g.age = 18
+print(g.age)
