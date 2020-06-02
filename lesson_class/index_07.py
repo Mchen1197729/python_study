@@ -103,6 +103,22 @@ Dog('Male').hi()
 print('***********************************')
 
 
+class Ch(object):
+    def __init__(self, ch=''):
+        self.ch = ch
+
+    def __getattr__(self, ch):
+        return Ch('%s/%s' % (self, ch))
+
+    def __str__(self):
+        return self.ch
+
+    __repr__ = __str__
+
+
+print(Ch('/prop').user.message)
+
+
 class Chain(object):
     def __init__(self, path=''):
         self.path = path

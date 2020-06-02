@@ -18,7 +18,7 @@ def divide(n):
 
 try:
     divide(0)
-except Exception as e:
+except ZeroDivisionError as e:
     print('出错了')
 finally:
     print('Finally')
