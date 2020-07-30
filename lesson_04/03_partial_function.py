@@ -1,6 +1,6 @@
 # Python中的偏函数
 
-# int(number,**base=10) 进行指定进制的转换（默认是十进制）
+# int(number,**01_base=10) 进行指定进制的转换（默认是十进制）
 import functools
 
 print(int('12345'))
