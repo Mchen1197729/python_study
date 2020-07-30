@@ -30,5 +30,5 @@ balance = 999
 rate = 95
 print('亲爱的%s,你好,你%d月份的话费是%d元,目前的余额是%d元,恭喜你超过%d%%的用户' % (username, month, fee, balance, rate))
 
-# 字符串的额format()方法也可以实现输出格式化的字符串
+# 字符串的format()方法也可以实现输出格式化的字符串
 print('Hello,{0},成绩提升了{1}%'.format('小花', 20.6))

@@ -122,3 +122,19 @@ def display(*, step=1):
 display()
 display10 = functools.partial(display, step=10)
 display10(step=20)
+
+print('*********************************************')
+
+
+def test1(*, username, password):
+    print(username, password)
+
+
+test1(username='Jack', password='Rose')
+
+
+def test2(**kwargs):
+    print(kwargs)
+
+
+test2(name='Jack', password='Rose')
