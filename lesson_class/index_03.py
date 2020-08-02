@@ -14,7 +14,7 @@ print(type([1, 2, 3]) == list)  # True
 print(type((1, 2, 3)) == tuple)  # True
 print(type({'name': 'Jack'}) == dict)  # True
 
-# 如果一个变量是函数类型 也乐意用type()来判断
+# 如果一个变量是函数类型 也可以用type()来判断
 print(type(abs))
 print(type(type(abs)) == type)  # True
 
