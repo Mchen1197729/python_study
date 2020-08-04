@@ -7,8 +7,8 @@ d = dict(name='Tom', age=29, gender='Female')
 print(pickle.dumps(d))
 
 # pickle.dump(obj,file) 将可序列化的对象直接写入文件
-# with open('./data/d.txt', 'wb') as fd:
-#     pickle.dump(d, fd)
+with open('./data/d.txt', 'wb') as fd:
+    pickle.dump(d, fd)
 
 # pickle.load()方法反序列化一个文件中的内容
 with open('./data/d.txt', 'rb') as fr:

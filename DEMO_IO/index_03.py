@@ -33,12 +33,13 @@ print(os.listdir('.'))
 print('**********************')
 
 
+# 递归遍历指定目录中的所有文件(文件&目录)
 def list_dir(dir_path):
     for x in os.listdir(dir_path):
-        if os.path.isdir(x):
-            list_dir(x)
+        if os.path.isdir(os.path.join(dir_path, x)):
+            list_dir(os.path.join(dir_path, x))
         else:
             print(os.path.join(dir_path, x))
 
 
-list_dir('.')
+list_dir('data')
