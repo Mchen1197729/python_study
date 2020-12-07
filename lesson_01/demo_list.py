@@ -1,3 +1,5 @@
+import random
+
 classmates = ['Jack', 'Rose', 'Jerry']
 print(classmates)
 
@@ -36,3 +38,5 @@ print(classmates)
 # list.clear() 清空自身
 classmates.clear()
 print(classmates)
+
+print(random.choice(['你好']))
